@@ -369,7 +369,18 @@ $('.badge-select').click(function() {
     selectedPriority = $(this).data('value');
     console.log(selectedPriority);
     document.getElementById("priority").value = selectedPriority;
+    document.getElementById("priority").defaultValue = selectedPriority;
     console.log(document.getElementById("priority").value);
+});
+$('form').submit(function(event) {
+        let finalValue = $('#priority').val();
+        console.log("Final priority before submit:", finalValue);
+        
+        // Tambahkan input hidden baru untuk memastikan data terkirim
+        $(this).append('<input type="hidden" name="priority" value="' + finalValue + '">');
+    });
+$('form').submit(function() {
+    console.log("Final priority value: " + $('#priority').val());
 });
   
             $('#custom-date-badge').on('click', function() {

@@ -47,10 +47,10 @@ class TaskController extends Controller
         $request->validate([
             'task_name' => 'required|string|max:255',
             'description' => 'required|string',
-            'priority' => 'required|string',
+            'priority' => 'required|in:low,medium,urgent',
             'due_date' => 'required|date|after_or_equal:today',
         ]);
-dd($request->all());
+
         Task::create([
             'task_name' => $request->task_name,
             'description' => $request->description,
