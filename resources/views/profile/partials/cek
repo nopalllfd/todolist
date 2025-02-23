@@ -1,0 +1,22 @@
+<div class="task-actions d-flex justify-content-start">
+                               <div class="d-flex col-8 justify-content-between"> 
+                                <form method="POST" action="{{ route('tasks.destroy', $task->id) }}" onsubmit="confirmDelete(event)">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn rounded btn-danger btn-sm btn-rounded pe-2">
+                                        <i class="fa fa-trash pe-2"></i>
+                                    </button>
+                                </form>
+                                <div class="btn-group justify-content-start gap-2">
+                                
+                                <a href="{{ route('tasks.edit', $task->id) }}" class="btn rounded btn-warning btn-sm btn-rounded ps-2" onclick="confirmEdit(event)">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                            </div></div>
+                                
+                               
+                            </div>
+                            <form method="POST" action="{{ route('tasks.done', $task->id) }}" onsubmit="confirmDone(event)">
+                                @csrf
+                                <button type="submit" class="btn rounded btn-success btn-sm btn-rounded">{{ __('Done') }}</button>
+                            </form>
