@@ -148,14 +148,15 @@
                                 </div>
 
                                 <div class="form-group mb-0">
-                                    <button type="submit" class="btn btn-primary btn-block btn-rounded">
-                                        {{ __("Let's Get Started") }}
+                                    <button type="submit" class="btn btn-success btn-block btn-rounded">
+                                        {{ __("Sign Up") }}
                                     </button>
                                 </div>
                             </form>
                             <div class="form-group mt-3 text-center">
-                                <a class="btn btn-link btn-link-rounded" href="{{ route('login') }}">
-                                    {{ __('Already have an account? Login!') }}
+                                <span>Already have an account?</span>
+                                <a class="p-0 btn btn-link btn-link-rounded text-success" href="{{ route('login') }}">
+                                    {{ __('Login!') }}
                                 </a>
                             </div>
                         </div>

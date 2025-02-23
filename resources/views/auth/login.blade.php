@@ -116,13 +116,14 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <button type="submit" class="btn btn-primary btn-block btn-rounded">
+                                    <button type="submit" class="btn btn-success btn-block btn-rounded">
                                         {{ __('Login') }}
                                     </button>
                                 </div>
                                 <div class="form-group mt-3 text-center">
-                                    <a class="btn btn-link btn-link-rounded" href="{{ route('register') }}">
-                                        {{ __('Do not have an account? Register here!') }}
+                                    <span>Do not have an account?</span>
+                                    <a class="p-0 btn btn-link btn-link-rounded text-success" href="{{ route('register') }}">
+                                        {{ __(' Register here!') }}
                                     </a>
                                 </div>
 
